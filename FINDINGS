@@ -1,0 +1,21 @@
+http://www.html5rocks.com/en/tutorials/cors/
+
+https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image?redirectlocale=en-US&redirectslug=CORS_Enabled_Image
+
+http://stackoverflow.com/questions/9192594/canvas-video-cors
+
+http://stackoverflow.com/questions/12458444/enabling-cross-origin-resource-sharing-on-iis7
+
+http://jbuckley.ca/2012/02/cross-origin-video/
+
+http://www.w3.org/TR/html5/embedded-content-0.html#security-with-canvas-elements
+
+---
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=682299
+
+https://code.google.com/p/chromium/issues/detail?id=173727
+
+---
+
+It seems to me that CORS isn't properly implemented on the video tag on all browsers in that they still taint the canvas when blitted, preventing further extraction ...

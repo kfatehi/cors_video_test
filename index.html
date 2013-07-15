@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>CORS Test</title>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript">
+  var test = function () {
+
+    var video = $('video').get(0);
+    // video.setAttribute('crossOrigin','anonymous');
+
+    var c = $('canvas').get(0);
+    // c.setAttribute('crossOrigin','anonymous');
+
+    
+    c.width = $(video).width();
+    c.height = $(video).height();
+    cxt = c.getContext('2d');
+    cxt.drawImage(video,0,0,c.width,c.height);
+    try {
+      c.toDataURL();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  setTimeout(test, 600);
+  </script>
+</head>
+<body>
+  <canvas crossorigin='anonymous'></canvas>
+  <video controls crossorigin='anonymous'>
+    <source src="http://192.168.0.206/strawberries.mp4" type="video/mp4">
+  </video>
+  <button onclick="test()">TEST</button>
+</body>
+</html>
